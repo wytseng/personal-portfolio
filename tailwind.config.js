@@ -17,6 +17,7 @@ module.exports = {
         burtons: 'burtons',
         inconsolata: 'inconsolata',
         poppins: 'poppins',
+        sharetechmono: 'share tech mono'
       },
       colors: {
         "main-blue": "#A8D0E6",

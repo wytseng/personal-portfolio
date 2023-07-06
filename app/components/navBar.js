@@ -24,12 +24,12 @@ const NavBar = ({scrollToSection, services, darkMode, setDarkMode}) => {
   });
 
   return (
-    <div className="sticky top-0">
-      <nav className='max-h-28 py-2 flex justify-between items-center bg-forest dark:bg-black px-10 md:px-20 lg:px-40'>
-        <div>
+    <div className="z-[1] sticky top-0">
+      <nav className='max-h-28 py-5 flex justify-between items-center bg-forest dark:bg-black px-10 md:px-20 lg:px-40'>
+        {/* <div>
           <Image alt="avatar" src={avatar} height={70}  />
-        </div>
-        {/* <h1 className='text-xl font-poppins'>Stephanie Tseng</h1> */}
+        </div> */}
+        <h1 className='text-white text-2xl font-inconsolata font-extrabold p-1'>st.</h1>
         <ul className='hidden md:flex gap-2 items-center'>
           <li>home</li>
           <li>about me</li>

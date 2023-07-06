@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&family=Poppins:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400&family=Share+Tech+Mono&family=VT323&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +13,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --typewriterSpeed: 6s;
 }
 
 body {
@@ -26,6 +27,6 @@ body {
 }
 
 p {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Share Tech Mono', monospace;
   /* font-family: 'Poppins', sans-serif; */
 }

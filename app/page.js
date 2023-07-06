@@ -5,7 +5,7 @@ import design from '../public/design.png';
 import code from '../public/code.png';
 import consulting from '../public/consulting.png';
 import NavBar from './components/navBar';
-import Introduction from './components/introduction';
+import Introduction from './components/Introduction/Introduction';
 import ScrollToTop from './components/scrollToTop';
 // import {BsFillMoonStarsFill} from 'react-icons/bs';
 import { useState, useRef } from 'react';

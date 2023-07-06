@@ -1,0 +1,55 @@
+.message-container {
+  transform: translateY(calc(30vh));
+  animation: fadeUp 2s ease
+    calc(var(--typewriterSpeed) + 1s) forwards;
+}
+
+.message {
+  position: relative;
+  max-width: fit-content;
+}
+
+.message::before,
+.message::after {
+  content:'';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.message::before {
+  background: white;
+  animation: typewriter var(--typewriterSpeed) steps(38) 1s forwards;
+}
+
+.message::after {
+  width: 0.125em;
+  background: black;
+  animation: 
+    typewriter var(--typewriterSpeed) steps(38) 1s forwards,
+    blinkTextCursor 750ms steps(38) infinite;
+}
+
+.introduction {
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeUp 2s ease 
+    calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+@keyframes typewriter {
+  to { left: 100% }
+}
+
+@keyframes blinkTextCursor {
+  to { background: transparent; }
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
