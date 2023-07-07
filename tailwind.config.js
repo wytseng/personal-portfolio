@@ -20,15 +20,11 @@ module.exports = {
         sharetechmono: 'share tech mono'
       },
       colors: {
-        "main-blue": "#A8D0E6",
-        "dark-blue": "#24305E",
-        "blue": "#374785",
-        "orange": "#F76C6C",
-        "white": "#FEFFFF",
-        "main": "#3AAFA9",
         "black": "#17252A",
         "forest": "#2B7A78",
+        "main": "#3AAFA9",
         "mist": "#DEF2F1",
+        "white": "#FEFFFF",
       },
       keyframes: {
         'open-hamburger': {

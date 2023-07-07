@@ -18,7 +18,10 @@ export default function Introduction() {
           </h1>
         </div>
         <div className="introduction">
-          <h2 className="text-4xl py-5 text-white font-poppins font-extrabold md:text-6xl"><span className='text-forest'>A</span> Frontend Developer.</h2>
+          <h2 className="text-4xl py-5 text-white font-poppins font-extrabold md:text-6xl">
+            <span className='text-forest'>A </span>
+             Frontend Developer.
+          </h2>
           {/* <h3 className="text-2xl py-2 md:text-3xl">Front end developor.</h3> */}
           <p className="text-md py-3 leading-6 text-gray-800 md:text-xl">
             I like to build <span className='opacity-0 animate-fade-in underline text-white'>responsive</span> and <span className='opacity-0 animate-fade-in underline text-white'>effective</span> websites that focus on user experience.

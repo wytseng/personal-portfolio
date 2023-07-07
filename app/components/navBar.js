@@ -1,6 +1,7 @@
 import { useAtom }from "jotai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { FiMenu } from "react-icons/fi"
+import { FiMenu } from "react-icons/fi";
+import { Turn as Hamburger } from "hamburger-react";
 // import { useState } from 'react';
 import { useEffect, useRef } from "react";
 import Image from "next/image";
@@ -11,11 +12,11 @@ import avatar from "../../public/avatar.png";
 const NavBar = ({scrollToSection, services, darkMode, setDarkMode}) => {
   // const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useAtom(mobileMenu);
-  const catMenu = useRef(null);
+  const navMenu = useRef(null);
 
   const closeOpenMenu = (e)=>{
-    if(catMenu.current && menuOpen && !catMenu.current.contains(e.target)){
-      setMenuOpen(false)
+    if(navMenu.current && menuOpen && !navMenu.current.contains(e.target)){
+      setMenuOpen(!menuOpen)
     };
   }
 
@@ -24,8 +25,8 @@ const NavBar = ({scrollToSection, services, darkMode, setDarkMode}) => {
   });
 
   return (
-    <div className="z-[1] sticky top-0">
-      <nav className='max-h-28 py-5 flex justify-between items-center bg-forest dark:bg-black px-10 md:px-20 lg:px-40'>
+    <div ref={navMenu} className="z-[1] sticky top-0">
+      <nav className='max-h-28 py-5 flex justify-between items-center bg-forest dark:bg-black px-8 md:px-20 lg:px-40'>
         {/* <div>
           <Image alt="avatar" src={avatar} height={70}  />
         </div> */}
@@ -41,11 +42,11 @@ const NavBar = ({scrollToSection, services, darkMode, setDarkMode}) => {
           {/* <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a></li> */}
         </ul>
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)}><FiMenu size={30} /></button>
+          <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={25} color="#FEFFFF" direction="right" rounded />
         </div>
       </nav>
-      <div ref={catMenu} className={`${menuOpen ? "block animate-open-hamburger" : "hidden"} absolute left-0 right-0 text-center origin-top`}>
-        <nav className="mobile-menu bg-white pb-2">
+      <div className={`${menuOpen ? "block animate-open-hamburger" : "hidden"} absolute left-0 right-0 text-center origin-top`}>
+        <nav className="mobile-menu bg-white pb-2 drop-shadow-md">
           <a className="block relative text-center p-2 cursor-pointer">Home</a>
           <a className="block relative text-center p-2 cursor-pointer">About Me</a>
           <a onClick={() => scrollToSection(services)} className="block relative text-center p-2 cursor-pointer">Service</a>
