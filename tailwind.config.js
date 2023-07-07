@@ -39,11 +39,22 @@ module.exports = {
         'close-hamburger': {
           '0%': {transform: 'scaleY(1)'},
           '100%': {transform: 'scaleY(0)'},
+        },
+        'fade-in': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(2rem)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          }
         }
       },
       animation: {
         'open-hamburger': 'open-hamburger 300ms ease-in-out forwards',
-        'close-hamburger': 'close-hamburger 200ms ease-in-out'
+        'close-hamburger': 'close-hamburger 200ms ease-in-out',
+        'fade-in': 'fade-in 1s ease-in-out 7s forwards'
       }
     },
   },
