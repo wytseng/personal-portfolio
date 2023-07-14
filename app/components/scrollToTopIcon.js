@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { FaAngleUp } from 'react-icons/fa';
 
-const ScrollToTop = () => {
+
+export const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
+
+const ScrollToTopIcon = () => {
   const [showScrollTopButton, setShowScrollTopButton] = useState(false);
 
   useEffect(() => {
@@ -14,22 +22,15 @@ const ScrollToTop = () => {
     })
   },[]);
 
-  const scrollTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    })
-  }
-
   return (
     <div>
       {showScrollTopButton && 
         <div className="fixed bottom-5 right-6 drop-shadow-md">
-          <FaAngleUp onClick={scrollTop} size={30} className='rounded-full p-1 cursor-pointer' />
+          <FaAngleUp onClick={scrollToTop} size={30} className='rounded-full p-1 cursor-pointer' />
         </div>
       }
     </div>
   )
 }
 
-export default ScrollToTop;
+export default ScrollToTopIcon;

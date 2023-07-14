@@ -1,0 +1,27 @@
+.animateButton {
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2B7A78;
+    transition: all 0.25s;
+    z-index: -1;
+    transform: translateX(-100%);
+  }
+  &:hover {
+    color: #FEFFFF;
+    transform: translate(-0.25em, -0.25em);
+    box-shadow: 0.5em 0.5em #3AAFA9;
+    /* transition: all 0.25s ease; */
+  }
+  &:hover::before {
+    transform: translateX(0);
+  }
+};

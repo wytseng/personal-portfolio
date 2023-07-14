@@ -7,9 +7,10 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { mobileMenu } from "../page";
 import avatar from "../../public/avatar.png";
+import { scrollToTop } from "./scrollToTopIcon";
 
 
-const NavBar = ({scrollToSection, services, darkMode, setDarkMode}) => {
+const NavBar = ({scrollToSection, home, works, darkMode, setDarkMode}) => {
   // const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useAtom(mobileMenu);
   const navMenu = useRef(null);
@@ -32,9 +33,9 @@ const NavBar = ({scrollToSection, services, darkMode, setDarkMode}) => {
         </div> */}
         <h1 className='text-white text-2xl font-inconsolata font-extrabold p-1'>st.</h1>
         <ul className='hidden md:flex gap-2 items-center'>
-          <li>home</li>
+          <li onClick={() => scrollToSection(home)}>home</li>
           <li>about me</li>
-          <li onClick={() => scrollToSection(services)}>services</li>
+          <li onClick={() => scrollToSection(works)}>works</li>
           <li>projects</li>
           <li>
             <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/>
@@ -47,9 +48,9 @@ const NavBar = ({scrollToSection, services, darkMode, setDarkMode}) => {
       </nav>
       <div className={`${menuOpen ? "block animate-open-hamburger" : "hidden"} absolute left-0 right-0 text-center origin-top`}>
         <nav className="mobile-menu bg-white pb-2 drop-shadow-md">
-          <a className="block relative text-center p-2 cursor-pointer">Home</a>
+          <a onClick={() => scrollToSection(home)} className="block relative text-center p-2 cursor-pointer">Home</a>
           <a className="block relative text-center p-2 cursor-pointer">About Me</a>
-          <a onClick={() => scrollToSection(services)} className="block relative text-center p-2 cursor-pointer">Service</a>
+          <a onClick={() => scrollToSection(works)} className="block relative text-center p-2 cursor-pointer">Service</a>
         </nav>
       </div>
     </div>
