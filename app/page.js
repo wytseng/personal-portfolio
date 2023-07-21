@@ -4,6 +4,7 @@ import Image from 'next/image';
 import NavBar from './components/navBar';
 import Introduction from './components/Introduction/Introduction';
 import Works from  './components/Works/Works';
+import Contact from './components/Contact/Contact';
 import ScrollToTop from './components/scrollToTopIcon';
 // import {BsFillMoonStarsFill} from 'react-icons/bs';
 import { useState, useRef } from 'react';
@@ -15,6 +16,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useAtom(mobileMenu);
   const home = useRef(null);
   const works = useRef(null);
+  const contact = useRef(null);
 
   const scrollToSection = (elementRef) => {
     elementRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -28,6 +30,7 @@ export default function Home() {
         scrollToSection={scrollToSection} 
         home={home}
         works={works} 
+        contact={contact}
         darkMode={darkMode} 
         setDarkMode={setDarkMode} 
       />
@@ -37,6 +40,9 @@ export default function Home() {
         </section>
         <section ref={works} className="works bg-mist p-10 md:px-20 lg:px-40 scroll-mt-28">
           <Works />
+        </section>
+        <section ref={contact} className="contact bg-forest p-10 md:px-20 lg:px-40 scroll-mt-28">
+          <Contact />
         </section>
         <section>
           <div>

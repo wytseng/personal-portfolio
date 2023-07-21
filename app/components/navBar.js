@@ -10,7 +10,7 @@ import avatar from "../../public/avatar.png";
 import { scrollToTop } from "./scrollToTopIcon";
 
 
-const NavBar = ({scrollToSection, home, works, darkMode, setDarkMode}) => {
+const NavBar = ({scrollToSection, home, works, contact, darkMode, setDarkMode}) => {
   // const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useAtom(mobileMenu);
   const navMenu = useRef(null);
@@ -36,6 +36,7 @@ const NavBar = ({scrollToSection, home, works, darkMode, setDarkMode}) => {
           <li onClick={() => scrollToSection(home)}>home</li>
           <li>about me</li>
           <li onClick={() => scrollToSection(works)}>works</li>
+          <li onClick={() => scrollToSection(contact)}>Contact Me</li>
           <li>projects</li>
           <li>
             <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/>
@@ -50,7 +51,8 @@ const NavBar = ({scrollToSection, home, works, darkMode, setDarkMode}) => {
         <nav className="mobile-menu bg-white pb-2 drop-shadow-md">
           <a onClick={() => scrollToSection(home)} className="block relative text-center p-2 cursor-pointer">Home</a>
           <a className="block relative text-center p-2 cursor-pointer">About Me</a>
-          <a onClick={() => scrollToSection(works)} className="block relative text-center p-2 cursor-pointer">Service</a>
+          <a onClick={() => scrollToSection(works)} className="block relative text-center p-2 cursor-pointer">My Work</a>
+          <a onClick={() => scrollToSection(contact)} className="block relative text-center p-2 cursor-pointer">Contact Me</a>
         </nav>
       </div>
     </div>
