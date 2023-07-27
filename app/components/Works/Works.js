@@ -70,10 +70,10 @@ export default function Works() {
           {description}
         </motion.p>
         <motion.div className="flex gap-2 px-6" variants={textAnimate}>
-          <a href={demo} target="_blank" className="animateButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
+          <a href={demo} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
             <button>Demo</button>
           </a>
-          <a href={github} target="_blank" className="animateButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
+          <a href={github} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
             <button><FiGithub style={{display: 'inline'}}/> GitHub</button>
           </a>
         </motion.div>

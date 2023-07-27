@@ -3,6 +3,7 @@ import { atom, useAtom } from 'jotai';
 import Image from 'next/image';
 import NavBar from './components/navBar';
 import Introduction from './components/Introduction/Introduction';
+import About from './components/About/About'
 import Works from  './components/Works/Works';
 import Contact from './components/Contact/Contact';
 import ScrollToTop from './components/scrollToTopIcon';
@@ -15,6 +16,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useAtom(mobileMenu);
   const home = useRef(null);
+  const about = useRef(null);
   const works = useRef(null);
   const contact = useRef(null);
 
@@ -29,6 +31,7 @@ export default function Home() {
       <NavBar 
         scrollToSection={scrollToSection} 
         home={home}
+        about={about}
         works={works} 
         contact={contact}
         darkMode={darkMode} 
@@ -38,27 +41,14 @@ export default function Home() {
         <section ref={home} className='min-h-screen bg-main px-10 md:px-20 lg:px-40 scroll-mt-28'>
           <Introduction />
         </section>
+        <section ref={about} className="about bg-main px-10 md:px-20 lg:px-40 scroll-mt-28">
+          <About />
+        </section>
         <section ref={works} className="works bg-mist p-10 md:px-20 lg:px-40 scroll-mt-28">
           <Works />
         </section>
         <section ref={contact} className="contact bg-forest p-10 md:px-20 lg:px-40 scroll-mt-28">
           <Contact />
-        </section>
-        <section>
-          <div>
-            <h3 className='text-3xl py-1'>Portfolio</h3>
-            <p className='text-md py-2 leading-8 text-gray-800'>
-              I have started my developer journey as a 
-              <span className="text-teal-500"> full-stack developer </span> at Givsum. 
-              I have experience working with React.js, TypeScript, Ruby on Rails, ...
-            </p>
-            <p className='text-md py-2 leading-8 text-gray-800'>
-              I am passionate about improve my own skill set and always open to learning new skills!
-            </p>
-          </div>
-          <div>
-            {/* <div><Image src= /></div> */}
-          </div>
         </section>
       </main>
     </div>
