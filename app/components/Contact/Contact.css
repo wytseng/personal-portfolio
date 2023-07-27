@@ -1,0 +1,46 @@
+/* BUTTON STYLING */
+
+.animateContactButton {
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  &:hover {
+    transform: translate(-0.25em, -0.25em);
+    box-shadow: 0.5em 0.5em #DEF2F1;
+    /* transition: all 0.25s ease; */
+  }
+}
+
+/* FORM STYLING */
+
+label {
+  font-family: "poppins";
+  margin-top: 0.5rem;
+}
+
+input[type="text"], input[type="email"], textarea[name="message"] {
+  padding: 2px;
+  border: 3px solid #76a5a3; 
+  border-radius: 5px;
+  font-family: "share tech mono";
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea[name="message"]:focus {
+  border: 3px solid #2B7A78;
+}
+
+input[type="submit"] {
+  margin-top: 1rem;
+  background-color: #2B7A78;
+  border-radius: 8px;
+  padding: 4px;
+  font-family: "poppins";
+  font-weight: 600;
+  color: #FEFFFF;
+  cursor: pointer;
+}
+
+input[type="submit"]:active {
+  background-color: #276563;
+}
