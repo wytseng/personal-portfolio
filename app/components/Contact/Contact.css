@@ -1,15 +1,30 @@
 /* BUTTON STYLING */
 
 .animateContactButton {
-  transition: all 0.25s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: #FEFFFF;
+    transition: all 0.25s;
+    transform: translateX(-100%);
+  }
+  &:hover {
+    color: black;
+    transform: translate(-0.25em, -0.25em);
+    box-shadow: 0.5em 0.5em #3AAFA9;
+    transition: all 0.25s ease;
+  }
+  &:hover::before {
+    transform: translateX(0);
+  }
   position: relative;
   overflow: hidden;
   transition: all 0.25s ease;
-  &:hover {
-    transform: translate(-0.25em, -0.25em);
-    box-shadow: 0.5em 0.5em #DEF2F1;
-    /* transition: all 0.25s ease; */
-  }
 }
 
 /* FORM STYLING */

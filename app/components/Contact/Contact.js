@@ -1,7 +1,7 @@
 import { ContactForm }from './form.js'
 import { motion } from 'framer-motion';
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
-import "./Contact.css"
+import "./contact.css"
 
 export default function Contact() {
 
@@ -43,8 +43,8 @@ export default function Contact() {
       <motion.div className='flex justify-between gap-4 px-4 text-white text-sm font-poppins underline'
         variants={fadeIn}
       >
-        <a className='animateContactButton w-1/2 border-2 rounded p-2 text-center cursor-pointer'><FiLinkedin color='white' className='inline-block mr-1' />LinkedIn</a>
-        <a className='animateContactButton w-1/2 border-2 rounded p-2 text-center cursor-pointer'><FiGithub color='white' className='inline-block mr-1' />Github</a>
+        <a href='https://www.linkedin.com/in/wytseng/' target="_blank" className='animateContactButton w-1/2 border-2 border-white rounded p-2 text-center cursor-pointer'><FiLinkedin className='inline-block mr-1' />LinkedIn</a>
+        <a href='https://github.com/wytseng' target='_blank' className='animateContactButton w-1/2 border-2 border-white rounded p-2 text-center cursor-pointer'><FiGithub className='inline-block mr-1' />Github</a>
         {/* <p className='border-2 rounded p-2'><FiLinkedin color='white' className='inline-block mr-1' />LinkedIn</p> */}
       </motion.div>
     </motion.div>

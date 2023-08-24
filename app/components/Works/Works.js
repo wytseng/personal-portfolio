@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { motion } from 'framer-motion';
 import { FiGithub } from "react-icons/fi";
 import { works }from "./projectList";
-import './Works.css';
+import './works.css';
 
 export default function Works() {
 
@@ -69,14 +69,22 @@ export default function Works() {
         >
           {description}
         </motion.p>
-        <motion.div className="flex gap-2 px-6" variants={textAnimate}>
-          <a href={demo} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
-            <button>Demo</button>
-          </a>
-          <a href={github} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
-            <button><FiGithub style={{display: 'inline'}}/> GitHub</button>
-          </a>
-        </motion.div>
+        {demo ? (
+          <motion.div className="flex gap-2 px-6" variants={textAnimate}>
+            <a href={demo} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
+              <button>Demo</button>
+            </a>
+            <a href={github} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-lg">
+              <button><FiGithub style={{display: 'inline'}}/> GitHub</button>
+            </a>
+          </motion.div>
+        ):(
+          <motion.div className="flex gap-2 px-6" variants={textAnimate}>
+            <a href={github} target="_blank" className="animateWorkButton font-poppins font-semibold w-full bg-mist border-3 p-2 border-forest rounded-lg">
+              <button><FiGithub style={{display: 'inline'}}/> GitHub</button>
+            </a>
+          </motion.div>
+        )}
       </motion.div>
     )
   }
