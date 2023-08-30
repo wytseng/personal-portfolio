@@ -47,6 +47,7 @@ const NavBar = ({scrollToSection, home, works, contact, darkMode, setDarkMode}) 
           <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={25} color="#FEFFFF" direction="right" rounded />
         </div>
       </nav>
+      {/* mobile menu */}
       <div className={`${menuOpen ? "block animate-open-hamburger" : "hidden"} absolute left-0 right-0 text-center origin-top`}>
         <nav className="mobile-menu bg-white pb-2 drop-shadow-md">
           <a onClick={() => scrollToSection(home)} className="block relative text-center p-2 cursor-pointer">Home</a>

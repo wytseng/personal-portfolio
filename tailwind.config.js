@@ -23,13 +23,13 @@ module.exports = {
           'conic-gradient(from 270deg at 70% 70%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        burtons: 'burtons',
-        inconsolata: 'inconsolata',
         poppins: 'poppins',
-        sharetechmono: 'share tech mono'
+        sharetechmono: 'share tech mono',
+        spacegrotesk: 'space grotesk',
       },
       colors: {
         "black": "#17252A",
+        "darkgreen": "#174140",
         "forest": "#2B7A78",
         "main": "#3AAFA9",
         "mist": "#DEF2F1",
