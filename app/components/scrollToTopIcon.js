@@ -25,7 +25,7 @@ const ScrollToTopIcon = () => {
   return (
     <div>
       {showScrollTopButton && 
-        <div className="fixed bottom-5 right-6 drop-shadow-md">
+        <div className="z-10 fixed bottom-8 right-8 drop-shadow-md bg-mist rounded-full">
           <FaAngleUp onClick={scrollToTop} size={30} className='rounded-full p-1 cursor-pointer' />
         </div>
       }

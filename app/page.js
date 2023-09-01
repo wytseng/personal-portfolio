@@ -22,7 +22,9 @@ export default function Home() {
 
   const scrollToSection = (elementRef) => {
     elementRef.current?.scrollIntoView({ behavior: 'smooth' });
-    setMenuOpen(!menuOpen);
+    if (menuOpen) {
+      setMenuOpen(false);
+    }
   }
 
   return (

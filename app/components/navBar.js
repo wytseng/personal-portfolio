@@ -15,32 +15,34 @@ const NavBar = ({scrollToSection, home, about, works, contact, darkMode, setDark
   const [menuOpen, setMenuOpen] = useAtom(mobileMenu);
   const navMenu = useRef(null);
 
-  const closeOpenMenu = (e)=>{
-    if(navMenu.current && menuOpen && !navMenu.current.contains(e.target)){
-      setMenuOpen(!menuOpen)
-    };
-  }
-
   useEffect(() => {
-    document.addEventListener('mousedown', closeOpenMenu)
-  });
+    const closeOpenMenu = (e)=>{
+      if (navMenu.current && menuOpen && !navMenu.current.contains(e.target)){
+        setMenuOpen(false);
+      };
+    };
+    document.addEventListener('mousedown', closeOpenMenu);
+    return () => {
+      document.removeEventListener('mousedown', closeOpenMenu);
+    };
+  }, [menuOpen]);
 
   return (
     <div ref={navMenu} className="z-[1] sticky top-0">
+      {/* web menu */}
       <nav className='max-h-28 py-5 flex justify-between items-center bg-forest dark:bg-black px-8 md:px-20 lg:px-40'>
         {/* <div>
           <Image alt="avatar" src={avatar} height={70}  />
         </div> */}
         <h1 className='text-white text-2xl font-inconsolata font-extrabold p-1'>st.</h1>
-        <ul className='hidden md:flex gap-2 items-center'>
-          <li onClick={() => scrollToSection(home)}>home</li>
-          <li>about me</li>
-          <li onClick={() => scrollToSection(works)}>works</li>
-          <li onClick={() => scrollToSection(contact)}>Contact Me</li>
-          <li>projects</li>
-          <li>
+        <ul className='font-poppins font-semibold text-white hidden md:flex gap-4 items-center'>
+          <li onClick={() => scrollToSection(home)} className="cursor-pointer">Home</li>
+          <li onClick={() => scrollToSection(about)} className="cursor-pointer">About Me</li>
+          <li onClick={() => scrollToSection(works)} className="cursor-pointer">Works</li>
+          <li onClick={() => scrollToSection(contact)} className="cursor-pointer">Contact Me</li>
+          {/* <li>
             <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/>
-          </li>
+          </li> */}
           {/* <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a></li> */}
         </ul>
         <div className="md:hidden">
