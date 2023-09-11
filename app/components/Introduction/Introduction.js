@@ -9,15 +9,15 @@ import './introduction.css'
 export default function Introduction() {
 
   return (
-    <div className="pt-8 p-2">
-      <div className="message-container flex flex-col items-center justify-center md:flex-row">
+    <div className="pt-8 p-2 md:pt-20">
+      <div className="message-container flex flex-col items-center justify-center md:justify-start md:flex-row">
         <Image alt="avatar" src={avatar} height={55} className="block pb-2 md:pr-3 md:block" />
-        <h1 className="text-center font-sharetechmono text-sm p-3 md:text-2xl rounded-full bg-white">
+        <h1 className="text-center font-sharetechmono text-sm p-3 md:text-xl rounded-full bg-white">
           <span className="message">👋🏻 Hi there! I&apos;m Stephanie Tseng.</span> 
         </h1>
       </div>
       <div className="introduction">
-        <h2 className="text-4xl py-5 text-white font-poppins font-extrabold drop-shadow-md md:text-6xl">
+        <h2 className="text-4xl py-5 md:py-7 text-white font-poppins font-extrabold drop-shadow-md md:text-6xl">
           <span className='text-forest'>A </span>
             Frontend Developer.
         </h2>
@@ -31,7 +31,7 @@ export default function Introduction() {
           <AiFillLinkedin />
           <AiFillYoutube />
         </div> */}
-        <div className="relative mx-auto h-60 mt-5 overflow-hidden">
+        <div className="relative mx-auto h-60 md:h-80 mt-5 overflow-hidden">
           <Image alt="full body avatar" src={fullAvatar} fill={true} style={{objectFit:'contain'}} />
         </div>
       </div>

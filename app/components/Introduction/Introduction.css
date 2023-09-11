@@ -1,7 +1,10 @@
 .message-container {
   transform: translateY(calc(30vh));
-  animation: fadeUp 2s ease
-    calc(var(--typewriterSpeed) + 1s) forwards;
+  animation: fadeUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+  @media only screen and (min-width: 768px) {
+    transform: translate(calc(30vh),calc(30vh));
+    animation: fadeCorner 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+  };
 }
 
 .message {
@@ -51,5 +54,12 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeCorner {
+  to {
+    opacity: 1;
+    transform: translate(0,0);
   }
 }

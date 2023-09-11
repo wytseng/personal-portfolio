@@ -3,6 +3,7 @@ import { PiPaintBrushHouseholdBold, PiFileSql } from "react-icons/pi";
 import { FaCode } from  "react-icons/fa";
 import { BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoNodejs, BiLogoTypescript, BiLogoGithub } from "react-icons/bi";
 import { SiRubyonrails } from "react-icons/si";
+import './about.css';
 
 export default function About() {
 
@@ -26,11 +27,11 @@ export default function About() {
         variants={fadeUp}
         viewport={{once: false}}
       >
-        <h2 className="flex py-2 font-poppins text-2xl text-white font-bold">Design<PiPaintBrushHouseholdBold className="ml-2"/></h2>
-        <p className="text-sm">
+        <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Design<PiPaintBrushHouseholdBold className="ml-2"/></h2>
+        <p className="text-sm md:text-base">
           Not your typical UI designer that creates flow charts and mock designs, but I have work experience with graphic design. 
         </p>
-        <p className="text-sm pt-2">
+        <p className="text-sm md:text-base pt-2">
           Given the experience, I often contemplate with the best font styles, button sizes, and element spacing, etc...
         </p>
       </motion.div>
@@ -40,19 +41,19 @@ export default function About() {
         variants={fadeUp}
         viewport={{once: false, amount: 0.5}}
       >
-        <h2 className="flex py-2 font-poppins text-2xl text-white font-bold">Engineering<FaCode className="ml-2"/></h2>
-        <p className="text-sm">As an inspiring web developer, I learned how to code and developed a passion for coding through my junior developer internship at a web startup company. Since then I have been practicing coding and improving in this field. </p>
-        <div className="mt-4 p-2 border-2 border-forest rounded-lg">
-          <h3 className="font-poppins text-xl text-white font-bold">Tools I Use: </h3>
-          <ul className="grid grid-cols-2 p-2 font-sharetechmono text-sm  text-darkgreen">
-            <li className="flex items-center"><BiLogoJavascript size={25} style={{marginRight: '0.5rem'}} />JavaScript</li>
-            <li className="flex items-center"><BiLogoHtml5 size={25} style={{marginRight: '0.5rem'}} />HTML5/CSS</li>
-            <li className="flex items-center"><BiLogoCss3 size={25} style={{marginRight: '0.5rem'}} />ReactJS</li>
-            <li className="flex items-center"><BiLogoNodejs size={25} style={{marginRight: '0.5rem'}} />NodeJS</li>
-            <li className="flex items-center"><BiLogoTypescript size={25} style={{marginRight: '0.5rem'}} />TypeScript</li>
-            <li className="flex items-center"><SiRubyonrails size={25} style={{marginRight: '0.5rem'}} />Ruby on Rails</li>
-            <li className="flex items-center"><PiFileSql size={25} style={{marginRight: '0.5rem'}} />SQL</li>
-            <li className="flex items-center"><BiLogoGithub size={25} style={{marginRight: '0.5rem'}} />Git</li>
+        <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Engineering<FaCode className="ml-2"/></h2>
+        <p className="text-sm md:text-base mb-4">As an inspiring web developer, I learned how to code and developed a passion for coding through my junior developer internship at a web startup company. Since then I have been practicing coding and improving in this field. </p>
+        <div className="mt-4 p-3 md:p-4 border-2 border-forest rounded-lg">
+          <h3 className="font-poppins text-xl md:text-2xl text-white font-bold">Tools I Use: </h3>
+          <ul className="grid grid-cols-1 text-center sm:grid-cols-2 p-3 md:p-4 font-sharetechmono text-sm md:text-base text-darkgreen">
+            <li className="flex items-center md:text-lg"><BiLogoJavascript className="toolIcons" />JavaScript</li>
+            <li className="flex items-center md:text-lg"><BiLogoHtml5 className="toolIcons" />HTML5/CSS</li>
+            <li className="flex items-center md:text-lg"><BiLogoCss3 className="toolIcons" />ReactJS</li>
+            <li className="flex items-center md:text-lg"><BiLogoNodejs className="toolIcons" />NodeJS</li>
+            <li className="flex items-center md:text-lg"><BiLogoTypescript className="toolIcons" />TypeScript</li>
+            <li className="flex items-center md:text-lg"><SiRubyonrails className="toolIcons" />Ruby on Rails</li>
+            <li className="flex items-center md:text-lg"><PiFileSql className="toolIcons" />SQL</li>
+            <li className="flex items-center md:text-lg"><BiLogoGithub className="toolIcons" />Git</li>
           </ul>
         </div>
       </motion.div>
