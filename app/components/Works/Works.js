@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { motion } from 'framer-motion';
 import { FiGithub } from "react-icons/fi";
 import { works }from "./projectList";
+import { Carousel } from "@material-tailwind/react";
 import './works.css';
 
 export default function Works() {
@@ -65,7 +66,7 @@ export default function Works() {
           <h3 className={`-mt-1 p-3 rounded-b-lg font-poppins font-bold text-white bg-forest ${direction ? "skew-y-2" : "-skew-y-2"}`}>{title}</h3>
         </motion.div>
         <div className="md:w-1/2 md:m-auto">
-          <motion.p className="py-4 text-sm" 
+          <motion.p className="py-4 text-sm md:text-base" 
           variants={textAnimate}
           >
             {description}
@@ -93,9 +94,9 @@ export default function Works() {
 
   return (
     <div>
-      <h2 className='font-poppins font-bold text-forest text-3xl pt-10 drop-shadow-md'>My Work</h2>
+      <h2 className='font-poppins font-bold text-forest text-3xl pt-10 mb-5 drop-shadow-md'>My Work</h2>
       {works.map((work, index) => (
-        <motion.div className="bg-white my-5 p-3 rounded-xl drop-shadow-xl md:bg-transparent md:drop-shadow-none" key={index}
+        <motion.div className="md:hidden bg-white mb-5 p-3 rounded-xl drop-shadow-xl" key={index}
           initial={{opacity:0, y:100}}
           whileInView={{opacity:1, y:0}}
           viewport={{once:true, amount:0.5}}
@@ -104,6 +105,28 @@ export default function Works() {
           <WorkCard direction={work.direction} alt={work.alt} img={work.img} title={work.title} description={work.description} demo={work.demo} github={work.github} />
         </motion.div>
       ))}
+      <Carousel
+        className="hidden md:flex rounded-xl"
+        navigation={({ setActiveIndex, activeIndex, length }) => (
+          <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            {new Array(length).fill("").map((_, i) => (
+              <span
+                key={i}
+                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                  activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                }`}
+                onClick={() => setActiveIndex(i)}
+              />
+            ))}
+          </div>
+        )}
+      >
+        {works.map((work, index) => (
+          <div className="mb-5 px-14 rounded-xl" key={index}>
+            <WorkCard direction={work.direction} alt={work.alt} img={work.img} title={work.title} description={work.description} demo={work.demo} github={work.github} />
+          </div>
+        ))}
+      </Carousel>
     </div>
   );
 }

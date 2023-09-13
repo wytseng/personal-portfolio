@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   darkMode: "class",
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -32,7 +35,8 @@ module.exports = {
         "darkgreen": "#174140",
         "forest": "#2B7A78",
         "main": "#3AAFA9",
-        "mist": "#DEF2F1",
+        // "mist": "#DEF2F1",
+        "mist": "#D0ECEB",
         "white": "#FEFFFF",
       },
       keyframes: {
@@ -64,4 +68,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+});
