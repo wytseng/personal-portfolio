@@ -10,6 +10,13 @@ module.exports = withMT({
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      sm: '576px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1200px',
+      xxl: '1400px',
+    },
     borderWidth: {
       DEFAULT: '1px',
       '0': '0',

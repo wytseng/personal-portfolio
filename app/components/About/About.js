@@ -21,29 +21,38 @@ export default function About() {
 
   return (
     <div className="pb-12 p-4">
+      <div className="md:flex md:gap-3">
+        <motion.div className="mb-6 md:w-1/2"
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={fadeUp}
+          viewport={{once: false}}
+        >
+          <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Design<PiPaintBrushHouseholdBold className="ml-2"/></h2>
+          <p className="text-sm md:text-base">
+            Not your typical UI designer that creates flow charts and mock designs, but I have work experience with graphic design. 
+          </p>
+          <p className="text-sm md:text-base pt-2">
+            Given the experience, I often contemplate with the best font styles, button sizes, and element spacing, etc...
+          </p>
+        </motion.div>
+        <motion.div className="mb-6 md:w-1/2"
+          initial={"offscreen"}
+          whileInView={"onscreen"}
+          variants={fadeUp}
+          viewport={{once: false, amount: 0.5}}
+        >
+          <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Engineering<FaCode className="ml-2"/></h2>
+          <p className="text-sm md:text-base mb-4">As an inspiring web developer, I learned how to code and developed a passion for coding through my junior developer internship at a web startup company. Since then I have been practicing coding and improving in this field. </p>
+        </motion.div>
+      </div>
       <motion.div className="mb-6"
         initial={"offscreen"}
         whileInView={"onscreen"}
         variants={fadeUp}
         viewport={{once: false}}
       >
-        <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Design<PiPaintBrushHouseholdBold className="ml-2"/></h2>
-        <p className="text-sm md:text-base">
-          Not your typical UI designer that creates flow charts and mock designs, but I have work experience with graphic design. 
-        </p>
-        <p className="text-sm md:text-base pt-2">
-          Given the experience, I often contemplate with the best font styles, button sizes, and element spacing, etc...
-        </p>
-      </motion.div>
-      <motion.div className="mb-6"
-        initial={"offscreen"}
-        whileInView={"onscreen"}
-        variants={fadeUp}
-        viewport={{once: false, amount: 0.5}}
-      >
-        <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Engineering<FaCode className="ml-2"/></h2>
-        <p className="text-sm md:text-base mb-4">As an inspiring web developer, I learned how to code and developed a passion for coding through my junior developer internship at a web startup company. Since then I have been practicing coding and improving in this field. </p>
-        <div className="mt-4 p-3 md:p-4 border-2 border-forest rounded-lg">
+        <div className="mt-4 p-3 md:p-4 border-2 border-forest rounded-2xl">
           <h3 className="font-poppins text-xl md:text-2xl text-white font-bold">Tools I Use: </h3>
           <ul className="grid grid-cols-1 text-center sm:grid-cols-2 p-3 md:p-4 font-sharetechmono text-sm md:text-base text-darkgreen">
             <li className="flex items-center md:text-lg"><BiLogoJavascript className="toolIcons" />JavaScript</li>

@@ -17,7 +17,7 @@ export const ContactForm = () => {
 
   return (
     <form ref={form} onSubmit={sendEmail} className="form_container flex flex-col p-4">
-      <p className='font-poppins text-sm bg-mist rounded-lg p-4'>
+      <p className='font-poppins text-sm md:text-base bg-mist rounded-xl p-4'>
         get in touch with me through email: <a href="mailto:wytseng113@gmail.com" className='underline font-poppins'>wytseng113@gmail.com</a>
       </p>
       <label>Name</label>

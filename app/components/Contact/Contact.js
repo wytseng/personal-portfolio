@@ -32,21 +32,24 @@ export default function Contact() {
       viewport={{once: true, amount: 0.5}}
       transition={{delay:0.5, staggerChildren:0.8}}
     >
-      <motion.div className="text-white" variants={fadeUp}>
-        <h2 className='font-poppins font-bold text-3xl pt-10 drop-shadow-md'>Contact Me</h2>
+      <motion.div className="text-white pt-10" variants={fadeUp}>
+        <h3 className='font-spacegrotesk font-semibold text-mist'>Contact Me</h3>
+        <h2 className='flex items-center font-poppins font-bold text-3xl xl:text-4xl drop-shadow-md'>Have a Coffee?</h2>
       </motion.div>
-      <motion.div className="bg-white rounded-lg drop-shadow-xl my-4"
-        variants={fadeUp}
-      >
-        <ContactForm />
-      </motion.div>
-      <motion.div className='flex justify-between gap-4 px-4 text-white text-sm font-poppins underline'
-        variants={fadeIn}
-      >
-        <a href='https://www.linkedin.com/in/wytseng/' target="_blank" className='animateContactButton w-1/2 border-2 border-white rounded p-2 text-center cursor-pointer'><FiLinkedin className='inline-block mr-1' />LinkedIn</a>
-        <a href='https://github.com/wytseng' target='_blank' className='animateContactButton w-1/2 border-2 border-white rounded p-2 text-center cursor-pointer'><FiGithub className='inline-block mr-1' />Github</a>
-        {/* <p className='border-2 rounded p-2'><FiLinkedin color='white' className='inline-block mr-1' />LinkedIn</p> */}
-      </motion.div>
+      <div className='md:w-2/3 md:mx-auto'>
+        <motion.div className="bg-white rounded-3xl drop-shadow-xl my-4"
+          variants={fadeUp}
+        >
+          <ContactForm />
+        </motion.div>
+        <motion.div className='flex justify-between gap-4 px-4 md:px-8 h-fit text-white text-sm font-poppins underline'
+          variants={fadeIn}
+        >
+          <a href='https://www.linkedin.com/in/wytseng/' target="_blank" className='animateContactButton w-1/2 border-2 border-white rounded-xl p-3 text-center cursor-pointer'><FiLinkedin className='inline-block mr-1' />LinkedIn</a>
+          <a href='https://github.com/wytseng' target='_blank' className='animateContactButton w-1/2 border-2 border-white rounded-xl p-3 text-center cursor-pointer'><FiGithub className='inline-block mr-1' />Github</a>
+          {/* <p className='border-2 rounded p-2'><FiLinkedin color='white' className='inline-block mr-1' />LinkedIn</p> */}
+        </motion.div>
+      </div>
     </motion.div>
   )
 }

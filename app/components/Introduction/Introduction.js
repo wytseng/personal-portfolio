@@ -9,7 +9,7 @@ import './introduction.css'
 export default function Introduction() {
 
   return (
-    <div className="pt-8 p-2 md:pt-20">
+    <div className="pt-8 p-2 md:pt-24">
       <div className="message-container flex flex-col items-center justify-center md:justify-start md:flex-row">
         <Image alt="avatar" src={avatar} height={55} className="block pb-2 md:pr-3 md:block" />
         <h1 className="text-center font-sharetechmono text-sm p-3 md:text-xl rounded-full bg-white">
