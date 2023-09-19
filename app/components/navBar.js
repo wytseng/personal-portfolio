@@ -1,17 +1,10 @@
 import { useAtom }from "jotai";
-import { BsFillMoonStarsFill } from "react-icons/bs";
-import { FiMenu } from "react-icons/fi";
 import { Turn as Hamburger } from "hamburger-react";
-// import { useState } from 'react';
 import { useEffect, useRef } from "react";
-import Image from "next/image";
-import { mobileMenu } from "../page";
-import avatar from "../../public/avatar.png";
-import { scrollToTop } from "./scrollToTopIcon";
+import { mobileMenu } from "../../lib/atoms";
 
 
 const NavBar = ({scrollToSection, home, about, works, contact, darkMode, setDarkMode}) => {
-  // const [darkMode, setDarkMode] = useState(false);
   const [menuOpen, setMenuOpen] = useAtom(mobileMenu);
   const navMenu = useRef(null);
 
@@ -25,25 +18,18 @@ const NavBar = ({scrollToSection, home, about, works, contact, darkMode, setDark
     return () => {
       document.removeEventListener('mousedown', closeOpenMenu);
     };
-  }, [menuOpen]);
+  });
 
   return (
     <div ref={navMenu} className="z-[1] sticky top-0">
       {/* web menu */}
       <nav className='max-h-28 py-5 flex justify-between items-center bg-forest dark:bg-black px-8 md:px-20 lg:px-40'>
-        {/* <div>
-          <Image alt="avatar" src={avatar} height={70}  />
-        </div> */}
         <h1 className='text-white text-2xl md:text-3xl font-inconsolata font-extrabold p-1'>st.</h1>
         <ul className='font-poppins font-semibold text-white md:text-lg xl:text-xl hidden md:flex gap-4 items-center'>
           <li onClick={() => scrollToSection(home)} className="cursor-pointer">Home</li>
           <li onClick={() => scrollToSection(about)} className="cursor-pointer">About Me</li>
           <li onClick={() => scrollToSection(works)} className="cursor-pointer">Works</li>
           <li onClick={() => scrollToSection(contact)} className="cursor-pointer">Contact Me</li>
-          {/* <li>
-            <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className='cursor-pointer text-2xl'/>
-          </li> */}
-          {/* <li><a className='bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8' href="#">Resume</a></li> */}
         </ul>
         <div className="md:hidden">
           <Hamburger toggled={menuOpen} toggle={setMenuOpen} size={25} color="#FEFFFF" direction="right" rounded />

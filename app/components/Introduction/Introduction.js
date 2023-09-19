@@ -11,7 +11,7 @@ export default function Introduction() {
   return (
     <div className="pt-8 p-2 md:pt-24">
       <div className={`${styles.messageContainer} flex flex-col items-center justify-center md:justify-start xxl:justify-center md:flex-row xxl:flex-col`}>
-        <Image alt="avatar" src={avatar} height={55} className="block pb-2 md:pr-3 md:block" />
+        <Image alt="avatar" src={avatar} height={55} priority={true} className="block pb-2 md:pr-3 md:block" />
         <h1 className="text-center font-sharetechmono text-sm p-3 md:text-xl rounded-full bg-white">
           <span className={styles.message}>👋🏻 Hi there! I&apos;m Stephanie Tseng.</span> 
         </h1>
@@ -29,7 +29,7 @@ export default function Introduction() {
           </p>
         </div>
         <div className="relative h-60 md:h-80 lg:h-[27rem] mt-5 overflow-hidden">
-          <Image alt="full body avatar" src={fullAvatar} fill={true} style={{objectFit:'contain'}} />
+          <Image alt="full body avatar" src={fullAvatar} sizes='100vw' fill={true} priority={true} style={{objectFit:'contain'}} />
         </div>
       </div>
     </div>

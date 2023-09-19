@@ -1,5 +1,6 @@
 "use client"; //this is a client component
-import { atom, useAtom } from 'jotai';
+import { useAtom } from 'jotai';
+import { mobileMenu } from "../lib/atoms";
 import NavBar from './components/navBar';
 import Introduction from './components/Introduction/Introduction';
 import About from './components/About/About'
@@ -7,8 +8,6 @@ import Works from  './components/Works/Works';
 import Contact from './components/Contact/Contact';
 import ScrollToTop from './components/scrollToTopIcon';
 import { useState, useRef } from 'react';
-
-export const mobileMenu = atom(false)
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);

@@ -8,13 +8,6 @@ import styles from './Works.module.css';
 
 export default function Works() {
 
-  useEffect(() => {
-    // Disable scroll restoration
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-  }, []);
-
   const rightAnimate = {
     offscreen: {x:350, opacity:0},
     onscreen: {
@@ -57,7 +50,7 @@ export default function Works() {
           className="py-4 px-2 drop-shadow-xl md:w-1/2"
           variants={direction ? leftAnimate : rightAnimate}
         >
-          <Image className={`m-auto rounded-t-xl border-4 border-forest ${direction ? "skew-y-2" : "-skew-y-2"}`} alt={alt} src={img} />
+          <Image className={`m-auto rounded-t-xl border-4 border-forest ${direction ? "skew-y-2" : "-skew-y-2"}`} alt={alt} src={img} priority={false} />
           <h3 className={`-mt-1 p-3 rounded-b-xl font-poppins font-bold text-white bg-forest ${direction ? "skew-y-2" : "-skew-y-2"}`}>{title}</h3>
         </motion.div>
         <div className="md:w-1/2 md:m-auto">
