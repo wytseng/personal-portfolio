@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FiGithub } from "react-icons/fi";
 import { works }from "./projectList";
 import { Carousel } from "@material-tailwind/react";
-import './works.css';
+import styles from './Works.module.css';
 
 export default function Works() {
 
@@ -68,16 +68,16 @@ export default function Works() {
           </motion.p>
           {demo ? (
             <motion.div className="flex gap-2 px-6 md:px-3" variants={textAnimate}>
-              <a href={demo} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-xl">
+              <a href={demo} target="_blank" className={`${styles.animateWorkButton} font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-xl`}>
                 <button>Demo</button>
               </a>
-              <a href={github} target="_blank" className="animateWorkButton font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-xl">
+              <a href={github} target="_blank" className={`${styles.animateWorkButton} font-poppins font-semibold w-1/2 bg-mist border-3 p-2 border-forest rounded-xl`}>
                 <button><FiGithub style={{display: 'inline'}}/> GitHub</button>
               </a>
             </motion.div>
           ):(
             <motion.div className="flex gap-2 px-6 md:px-3" variants={textAnimate}>
-              <a href={github} target="_blank" className="animateWorkButton font-poppins font-semibold w-full bg-mist border-3 p-2 border-forest rounded-xl">
+              <a href={github} target="_blank" className={`${styles.animateWorkButton} font-poppins font-semibold w-full bg-mist border-3 p-2 border-forest rounded-xl`}>
                 <button><FiGithub style={{display: 'inline'}}/> GitHub</button>
               </a>
             </motion.div>

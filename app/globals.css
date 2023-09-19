@@ -3,11 +3,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* 
-@font-face {
-  font-family: "burtons";
-  src: url('../public/Burtons.otf');
-} */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -27,10 +22,45 @@ body {
 }
 
 p {
-  /* font-family: 'Share Tech Mono', monospace; */
   font-family: 'Space Grotesk', sans-serif;
 }
 
 a {
   font-family: 'Poppins';
+}
+
+/* CONTACT FORM STYLING */
+
+label {
+  font-family: "poppins";
+  margin-top: 0.5rem;
+}
+
+input[type="text"], input[type="email"], textarea[name="message"] {
+  padding: 0.3rem;
+  border: 3px solid #76a5a3; 
+  border-radius: 0.75rem;
+  font-family: "share tech mono";
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea[name="message"]:focus {
+  border: 3px solid #2B7A78;
+}
+
+input[type="submit"] {
+  /* width: 50%; */
+  margin-top: 1rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+  background-color: #2B7A78;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-family: "poppins";
+  font-weight: 600;
+  color: #FEFFFF;
+  cursor: pointer;
+}
+
+input[type="submit"]:active {
+  background-color: #276563;
 }

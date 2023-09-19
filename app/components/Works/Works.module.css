@@ -1,3 +1,5 @@
+/* BUTTON STYLING & ANIMATION */
+
 .animateWorkButton {
   &::before {
     content: "";

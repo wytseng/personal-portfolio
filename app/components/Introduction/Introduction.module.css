@@ -1,7 +1,17 @@
-.message-container {
+/* LANDING ANIMATION */
+
+.messageContainer {
   transform: translateY(calc(30vh));
   animation: fadeUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
   @media only screen and (min-width: 768px) {
+    transform: translate(calc(50vw - 292px),calc(30vh));
+    animation: fadeCorner 3s ease calc(var(--typewriterSpeed) + 1s) forwards;
+  };
+  @media only screen and (min-width: 1024px) {
+    transform: translate(calc(50vw - 356px),calc(30vh));
+    animation: fadeCorner 3s ease calc(var(--typewriterSpeed) + 1s) forwards;
+  };
+  @media only screen and (min-width: 1200px) {
     transform: translate(calc(50vw - 388px),calc(30vh));
     animation: fadeCorner 3s ease calc(var(--typewriterSpeed) + 1s) forwards;
   };
@@ -39,16 +49,16 @@
     blinkTextCursor 750ms steps(38) infinite;
 }
 
+/* CONTENT ANIMATION */
+
 .introduction {
   opacity: 0;
   transform: translateY(3rem);
   animation: fadeUp 2s ease 
-    calc(var(--typewriterSpeed) + 2s) forwards;
+    calc(var(--typewriterSpeed) + 3s) forwards;
 }
 
-.imageStyle {
-  width: auto !important;
-}
+/* ANIMATION CODE */
 
 @keyframes typewriter {
   to { left: 100% }

@@ -2,7 +2,7 @@ import { AiFillTwitterCircle, AiFillLinkedin, AiFillYoutube } from 'react-icons/
 import Image from 'next/image';
 import fullAvatar from '../../../public/sittingAvatar2.png';
 import avatar from '../../../public/avatar.png';
-import './introduction.css'
+import styles from './Introduction.module.css';
 
 
 
@@ -10,13 +10,13 @@ export default function Introduction() {
 
   return (
     <div className="pt-8 p-2 md:pt-24">
-      <div className="message-container flex flex-col items-center justify-center md:justify-start xxl:justify-center md:flex-row xxl:flex-col">
+      <div className={`${styles.messageContainer} flex flex-col items-center justify-center md:justify-start xxl:justify-center md:flex-row xxl:flex-col`}>
         <Image alt="avatar" src={avatar} height={55} className="block pb-2 md:pr-3 md:block" />
         <h1 className="text-center font-sharetechmono text-sm p-3 md:text-xl rounded-full bg-white">
-          <span className="message">👋🏻 Hi there! I&apos;m Stephanie Tseng.</span> 
+          <span className={styles.message}>👋🏻 Hi there! I&apos;m Stephanie Tseng.</span> 
         </h1>
       </div>
-      <div className="introduction xl:mt-10">
+      <div className={`${styles.introduction} xl:mt-10`}>
         <div className='xxl:text-center'>
           <h2 className="text-4xl py-5 md:py-7 text-white font-poppins font-extrabold drop-shadow-md md:text-6xl">
             <span className='text-forest'>A </span>
@@ -28,7 +28,7 @@ export default function Introduction() {
             <br></br>have experience with startups, constantly learning and striving for improvement.
           </p>
         </div>
-        <div className="relative h-60 md:h-80 xl:h-[27rem] mt-5 overflow-hidden">
+        <div className="relative h-60 md:h-80 lg:h-[27rem] mt-5 overflow-hidden">
           <Image alt="full body avatar" src={fullAvatar} fill={true} style={{objectFit:'contain'}} />
         </div>
       </div>

@@ -1,13 +1,11 @@
 "use client"; //this is a client component
 import { atom, useAtom } from 'jotai';
-import Image from 'next/image';
 import NavBar from './components/navBar';
 import Introduction from './components/Introduction/Introduction';
 import About from './components/About/About'
 import Works from  './components/Works/Works';
 import Contact from './components/Contact/Contact';
 import ScrollToTop from './components/scrollToTopIcon';
-// import {BsFillMoonStarsFill} from 'react-icons/bs';
 import { useState, useRef } from 'react';
 
 export const mobileMenu = atom(false)

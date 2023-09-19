@@ -3,7 +3,7 @@ import { PiPaintBrushHouseholdBold, PiFileSql } from "react-icons/pi";
 import { FaCode } from  "react-icons/fa";
 import { BiLogoJavascript, BiLogoHtml5, BiLogoCss3, BiLogoNodejs, BiLogoTypescript, BiLogoGithub } from "react-icons/bi";
 import { SiRubyonrails } from "react-icons/si";
-import './about.css';
+import styles from './About.module.css';
 
 export default function About() {
 
@@ -55,14 +55,14 @@ export default function About() {
         <div className="mt-4 p-3 md:p-4 border-2 border-forest rounded-2xl">
           <h3 className="font-poppins text-xl md:text-2xl text-white font-bold">Tools I Use: </h3>
           <ul className="grid grid-cols-1 text-center sm:grid-cols-2 p-3 md:p-4 font-sharetechmono text-sm md:text-base text-darkgreen">
-            <li className="flex items-center md:text-lg"><BiLogoJavascript className="toolIcons" />JavaScript</li>
-            <li className="flex items-center md:text-lg"><BiLogoHtml5 className="toolIcons" />HTML5/CSS</li>
-            <li className="flex items-center md:text-lg"><BiLogoCss3 className="toolIcons" />ReactJS</li>
-            <li className="flex items-center md:text-lg"><BiLogoNodejs className="toolIcons" />NodeJS</li>
-            <li className="flex items-center md:text-lg"><BiLogoTypescript className="toolIcons" />TypeScript</li>
-            <li className="flex items-center md:text-lg"><SiRubyonrails className="toolIcons" />Ruby on Rails</li>
-            <li className="flex items-center md:text-lg"><PiFileSql className="toolIcons" />SQL</li>
-            <li className="flex items-center md:text-lg"><BiLogoGithub className="toolIcons" />Git</li>
+            <li className="flex items-center md:text-lg"><BiLogoJavascript className={styles.toolIcons} />JavaScript</li>
+            <li className="flex items-center md:text-lg"><BiLogoHtml5 className={styles.toolIcons} />HTML5/CSS</li>
+            <li className="flex items-center md:text-lg"><BiLogoCss3 className={styles.toolIcons} />ReactJS</li>
+            <li className="flex items-center md:text-lg"><BiLogoNodejs className={styles.toolIcons} />NodeJS</li>
+            <li className="flex items-center md:text-lg"><BiLogoTypescript className={styles.toolIcons} />TypeScript</li>
+            <li className="flex items-center md:text-lg"><SiRubyonrails className={styles.toolIcons} />Ruby on Rails</li>
+            <li className="flex items-center md:text-lg"><PiFileSql className={styles.toolIcons} />SQL</li>
+            <li className="flex items-center md:text-lg"><BiLogoGithub className={styles.toolIcons} />Git</li>
           </ul>
         </div>
       </motion.div>
