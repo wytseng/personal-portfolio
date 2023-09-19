@@ -35,7 +35,7 @@ const NavBar = ({scrollToSection, home, about, works, contact, darkMode, setDark
           <Image alt="avatar" src={avatar} height={70}  />
         </div> */}
         <h1 className='text-white text-2xl md:text-3xl font-inconsolata font-extrabold p-1'>st.</h1>
-        <ul className='font-poppins font-semibold text-white md:text-lg hidden md:flex gap-4 items-center'>
+        <ul className='font-poppins font-semibold text-white md:text-lg xl:text-xl hidden md:flex gap-4 items-center'>
           <li onClick={() => scrollToSection(home)} className="cursor-pointer">Home</li>
           <li onClick={() => scrollToSection(about)} className="cursor-pointer">About Me</li>
           <li onClick={() => scrollToSection(works)} className="cursor-pointer">Works</li>

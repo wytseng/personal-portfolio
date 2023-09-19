@@ -36,7 +36,7 @@ export default function Contact() {
         <h3 className='font-spacegrotesk font-semibold text-mist'>Contact Me</h3>
         <h2 className='flex items-center font-poppins font-bold text-3xl xl:text-4xl drop-shadow-md'>Have a Coffee?</h2>
       </motion.div>
-      <div className='md:w-2/3 md:mx-auto'>
+      <div className='md:w-2/3 md:mx-auto xxl:w-1/2'>
         <motion.div className="bg-white rounded-3xl drop-shadow-xl my-4"
           variants={fadeUp}
         >

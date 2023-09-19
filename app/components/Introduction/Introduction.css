@@ -2,8 +2,12 @@
   transform: translateY(calc(30vh));
   animation: fadeUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
   @media only screen and (min-width: 768px) {
-    transform: translate(calc(30vh),calc(30vh));
-    animation: fadeCorner 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+    transform: translate(calc(50vw - 388px),calc(30vh));
+    animation: fadeCorner 3s ease calc(var(--typewriterSpeed) + 1s) forwards;
+  };
+  @media only screen and (min-width: 1400px) {
+    transform: translateY(calc(30vh));
+    animation: fadeUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
   };
 }
 
@@ -40,6 +44,10 @@
   transform: translateY(3rem);
   animation: fadeUp 2s ease 
     calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+.imageStyle {
+  width: auto !important;
 }
 
 @keyframes typewriter {

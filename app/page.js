@@ -40,7 +40,7 @@ export default function Home() {
         setDarkMode={setDarkMode} 
       />
       <main className='snap-y dark:bg-gray-900'>
-        <section ref={home} className='min-h-screen bg-main px-10 md:px-16 lg:px-32 xl:px-40 scroll-mt-28'>
+        <section ref={home} className='min-h-[calc(100vh-84px)] bg-main px-10 md:px-16 lg:px-32 xl:px-40 scroll-mt-28'>
           <Introduction />
         </section>
         <section ref={about} className="about bg-main px-10 md:px-16 lg:px-32 xl:px-40 scroll-mt-28">
