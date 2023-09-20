@@ -3,7 +3,7 @@ import { useAtom } from 'jotai';
 import { mobileMenu } from "../lib/atoms";
 import NavBar from './components/navBar';
 import Introduction from './components/Introduction/Introduction';
-import About from './components/About/About'
+import About from './components/About/About';
 import Works from  './components/Works/Works';
 import Contact from './components/Contact/Contact';
 import ScrollToTop from './components/scrollToTopIcon';

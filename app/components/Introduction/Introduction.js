@@ -21,9 +21,9 @@ export default function Introduction() {
             <span className='text-forest'>A </span>
               Frontend Developer.
           </h1>
-          <p className="text-md py-3 leading-6 text-gray-800 md:text-xl">
-            I build <span className='font-sharetechmono opacity-0 animate-fade-in text-white'>clean, responsive</span> and <span className='font-sharetechmono opacity-0 animate-fade-in text-white'>effective</span> websites with an emphasis on user experience.
-            As an apsiring developer, I am constantly learning and improving my skill set.
+          <p className="text-md py-3 leading-6 md:text-xl">
+            I build <span className='font-sharetechmono opacity-0 animate-fade-in text-white'>clean, responsive</span> and <span className='font-sharetechmono opacity-0 animate-fade-in text-white'>effective</span> websites that focus on the user experience.
+            As an apsiring developer, I am constantly learning and practicing with new tools.
           </p>
         </div>
         <div className="relative h-60 md:h-80 xl:h-[27rem] mt-5 overflow-hidden">

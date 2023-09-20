@@ -31,9 +31,10 @@ export default function About() {
           <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Design<PiPaintBrushHouseholdBold className="ml-2"/></h2>
           <p className="text-sm md:text-base">
             Not your typical UI/UX designer that creates flow charts and mock designs, but I enjoy making minimal and aesthetic products. 
+            When coding, I often find myself contemplating with the best font styles, button sizes, and element spacing, etc...
           </p>
           <p className="text-sm md:text-base pt-2">
-            When coding, I often contemplate with the best font styles, button sizes, and element spacing, etc...
+            Additionally, I am familiar with graphic design and video editing, utilizing tools like Adobe Photoshop, Lightroom and FinalCut Pro.
           </p>
         </motion.div>
         <motion.div className="mb-6 md:w-1/2"
@@ -43,8 +44,8 @@ export default function About() {
           viewport={{once: false, amount: 0.5}}
         >
           <h2 className="flex py-2 font-poppins text-2xl md:text-3xl text-white font-bold">Engineering<FaCode className="ml-2"/></h2>
-          <p className="text-sm md:text-base">As a business graduate, I learned how to code and developed a passion for coding through my junior developer internship at a tech startup company. </p>
-          <p className="text-sm md:text-base pt-2">As an aspiring web developer, I am constantly learning, practicing and improving in this field. </p>
+          <p className="text-sm md:text-base">As a business graduate, I learned how to code and developed a passion for coding through a couple college electives and a junior developer internship at a tech startup company. </p>
+          <p className="text-sm md:text-base pt-2">After completing my startup internship, I headed straight to a full-stack web development bootcamp to professionally learn more about back-end developing and current trends. </p>
         </motion.div>
       </div>
       <motion.div className="mb-6"
