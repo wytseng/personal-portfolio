@@ -70,7 +70,7 @@ module.exports = withMT({
       animation: {
         'open-hamburger': 'open-hamburger 300ms ease-in-out forwards',
         'close-hamburger': 'close-hamburger 200ms ease-in-out',
-        'fade-in': 'fade-in 1.5s ease-in-out 8s forwards'
+        'fade-in': 'fade-in 1.5s ease-in-out 7s forwards'
       }
     },
   },

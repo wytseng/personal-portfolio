@@ -55,7 +55,7 @@
   opacity: 0;
   transform: translateY(3rem);
   animation: fadeUp 2s ease 
-    calc(var(--typewriterSpeed) + 3s) forwards;
+    calc(var(--typewriterSpeed) + 2s) forwards;
 }
 
 /* ANIMATION CODE */
