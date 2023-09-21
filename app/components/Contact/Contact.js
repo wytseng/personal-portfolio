@@ -1,9 +1,13 @@
 import { ContactForm }from './form.js'
+import { alertMessage } from '@/lib/atoms.js';
 import { motion } from 'framer-motion';
-import { FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiLinkedin, FiGithub, FiX } from 'react-icons/fi';
 import styles from "./Contact.module.css"
+import { useAtom } from 'jotai';
 
 export default function Contact() {
+
+  const [message, setMessage] = useAtom(alertMessage);
 
   const fadeUp = {
     offscreen: {y:200, opacity:0},
@@ -22,6 +26,12 @@ export default function Contact() {
     onscreen: {
       opacity:1,
       duration:1.5,
+    }
+  }
+
+  const handleAlertClose = () => {
+    if (message) {
+      setMessage("");
     }
   }
 
@@ -48,6 +58,10 @@ export default function Contact() {
           <a href='https://www.linkedin.com/in/wytseng/' target="_blank" className={`${styles.animateContactButton} w-1/2 border-2 border-white rounded-xl p-3 text-center cursor-pointer`}><FiLinkedin className='inline-block mr-1' />LinkedIn</a>
           <a href='https://github.com/wytseng' target='_blank' className={`${styles.animateContactButton} w-1/2 border-2 border-white rounded-xl p-3 text-center cursor-pointer`}><FiGithub className='inline-block mr-1' />Github</a>
         </motion.div>
+      </div>
+      <div className={`${message ? 'fixed' : 'hidden'} left-12 bottom-8 w-1/3 p-4 flex justify-between items-center bg-black rounded-lg`}>
+        <p className="text-mist">{message}</p>
+        <button onClick={handleAlertClose} className='bg-mist rounded-full p-0.5'><FiX /></button>
       </div>
     </motion.div>
   )

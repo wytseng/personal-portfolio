@@ -1,8 +1,11 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { alertMessage } from '@/lib/atoms';
 import emailjs from '@emailjs/browser';
+import { useAtom } from 'jotai';
 
 export const ContactForm = () => {
   const form = useRef();
+  const [message, setMessage] = useAtom(alertMessage);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -10,6 +13,8 @@ export const ContactForm = () => {
     emailjs.sendForm('service_nthx8fl', 'template_hqf31n4', form.current, 'ToYJ92mvbEoBFTcFW')
       .then((result) => {
           console.log(result.text);
+          form.current.reset();
+          setMessage("Order Received ⛾ ")
       }, (error) => {
           console.log(error.text);
       });
