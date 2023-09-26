@@ -59,7 +59,7 @@ export default function Contact() {
           <a href='https://github.com/wytseng' target='_blank' className={`${styles.animateContactButton} w-1/2 border-2 border-white rounded-xl p-3 text-center cursor-pointer`}><FiGithub className='inline-block mr-1' />Github</a>
         </motion.div>
       </div>
-      <div className={`${message ? 'fixed' : 'hidden'} left-12 bottom-8 w-1/3 p-4 flex justify-between items-center bg-black rounded-lg`}>
+      <div className={`${message ? 'fixed' : 'hidden'} left-[43%] -translate-x-[50%] sm:translate-x-0 sm:left-12 bottom-8 w-[70%] sm:w-1/2 md:w-1/3 p-4 flex justify-between items-center bg-black rounded-lg`}>
         <p className="text-mist">{message}</p>
         <button onClick={handleAlertClose} className='bg-mist rounded-full p-0.5'><FiX /></button>
       </div>
