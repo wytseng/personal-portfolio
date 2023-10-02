@@ -43,7 +43,7 @@ export default function Home() {
         <section ref={about} className="about bg-main px-10 md:px-16 lg:px-32 xl:px-40 scroll-mt-28">
           <About />
         </section>
-        <section ref={works} className="works bg-mist p-10 md:px-16 lg:px-32 xl:px-40 scroll-mt-28">
+        <section ref={works} className="works bg-mist p-10 md:px-16 lg:px-32 xl:px-40 scroll-mt-28 overflow-hidden w-full">
           <Works />
         </section>
         <section ref={contact} className="contact bg-forest p-10 md:px-16 lg:px-32 xl:px-40 scroll-mt-28">
